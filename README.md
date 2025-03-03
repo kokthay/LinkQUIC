@@ -73,7 +73,28 @@ This project utilizes multiple eBPF maps to store and process QUIC traffic infor
 
 Each of these maps can provide insights into QUIC connections, their transitions, and potential anomalies. The maps ensure that QUIC traffic is efficiently tracked and analyzed without requiring decryption.
 
-
+## Installation Guide for Ubuntu 22.04.04 LTS
+### 1. Clone the Repository
+```bash
+git clone https://github.com/kokthay/LinkQUIC.git
+```
+### 2. Install BCC
+```bash
+cd LinkQUIC
+chmod +x install_bcc(ubuntu22.04).sh
+./install_bcc(ubuntu22.04).sh
+```
+### 3. Configure Network Interfaces
+Add or update the network interfaces in `middlebox/middlebox.py` or `endpoint/endpoint.py` to match your system's network configuration.
+### 4. Run LinkQUIC
+On the Endpoint Machine:
+```bash
+sudo python3 endpoint/endpoint.py
+```
+On the Middlebox Machine:
+```bash
+sudo python3 middlebox/middlebox.py
+```
 ## Credits and Acknowledgments
 - This work  is supported by Belgium Walloon Region [CyberExcellence](https://cyberexcellence.be/) Program (Grant #2110186).
 - BCC and eBPF: This project builds on the BCC framework and Linux eBPF technology. Thanks to the open-source community around eBPF and BCC for providing the tools and examples that made this project possible. For more information on BCC, visit the BCC GitHub repository.
