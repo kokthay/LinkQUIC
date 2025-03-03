@@ -10,9 +10,9 @@ The Endpoint Monitor captures:
 - Outgoing QUIC packets from the local host (using a kprobe on the kernel function `udp_send_skb`).
 - Incoming QUIC packets to the local host (using XDP attached to network interfaces).
 
-We tested the endpoint monitoring on **Ubuntu 22.04.4 LTS**, but it should work with other versions. Make sure to update the correct interface name in `endpoint.py`.
+We tested the endpoint monitoring on Ubuntu 22.04.4 LTS, but it should work with other versions. Make sure to update the correct interface name in `endpoint.py`.
 
-# Example Usage
+## Example Usage
 
 To illustrate, let’s assume we run the Endpoint Monitor on a QUIC client machine.
 

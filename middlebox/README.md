@@ -8,9 +8,9 @@ The Middlebox Monitor is designed to run on a middlebox (e.g., switch, firewall,
 ## Captured Data
 The Middlebox Monitor captures incoming and outgoing QUIC packets using XDP attached to all network interfaces of the middlebox.
 
-We tested the middlebox monitoring on **Ubuntu 22.04.4 LTS**, but it should work with other versions. Make sure to update the correct interface name in `middlebox.py`.
+We tested the middlebox monitoring on Ubuntu 22.04.4 LTS, but it should work with other versions. Make sure to update the correct interface name in `middlebox.py`.
 
-# Example Usage
+## Example Usage
 
 To illustrate, let’s assume we run the Middlebox Monitor on an Ubuntu server running [Open vSwitch](https://www.openvswitch.org/). Then, update all network interfaces of the virtual switch in `middlebox.py`. This switch must be used for switching between a client and server or a client and the internet.
 
