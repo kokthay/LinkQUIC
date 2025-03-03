@@ -5,13 +5,14 @@ import ctypes
 import struct
 import time
 
-with open("middlebox.c", "r") as f:
+with open("endpoint.c", "r") as f:
     bpf_program = f.read()
 bpf = BPF(text=bpf_program)
 fn = bpf.load_func("ingress_xdp", BPF.XDP)
 # Attach XDP to network interfaces
-bpf.attach_xdp("ens20", fn)
 bpf.attach_xdp("ens21", fn)
+# Attach trace_udp_send_skb to udp_send_skb kernel function
+bpf.attach_kprobe(event="udp_send_skb", fn_name="trace_udp_send_skb")
 # Convert IPv4 from integer format to string
 def ipv4_to_str(ip):
     """Convert an IPv4 address from integer to dotted-decimal format."""
