@@ -74,6 +74,7 @@ This project utilizes multiple eBPF maps to store and process QUIC traffic infor
 Each of these maps can provide insights into QUIC connections, their transitions, and potential anomalies. The maps ensure that QUIC traffic is efficiently tracked and analyzed without requiring decryption.
 
 
-# Credits and Acknowledgments
+## Credits and Acknowledgments
+- This work  is supported by Belgium Walloon Region [CyberExcellence](https://cyberexcellence.be/) Program (Grant #2110186).
 - BCC and eBPF: This project builds on the BCC framework and Linux eBPF technology. Thanks to the open-source community around eBPF and BCC for providing the tools and examples that made this project possible. For more information on BCC, visit the BCC GitHub repository.
 - QUIC Protocol: QUIC header parsing logic is based on the protocol’s specification (IETF RFC 9000 for QUIC Transport). The project specifically targets QUIC version 1. Future versions or variants might require adjustments.
