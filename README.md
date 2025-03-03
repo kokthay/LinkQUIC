@@ -1,6 +1,6 @@
-# QUIC Traffic Identification in Kernel Space Using a Heuristic Technique with eBPF 
+# LinkQUIC: QUIC Traffic Identification in Kernel Space Using a Heuristic Technique with eBPF 
 
-This project provides tools to monitor QUIC network connections using eBPF (Extended Berkeley Packet Filter) programs. It includes two components: an Endpoint Monitor** (designed to run on a QUIC client or server host) and a **Middlebox Monitor** (for deployment on a network device that observes traffic). 
+This project provides tools to monitor QUIC network connections using eBPF (Extended Berkeley Packet Filter) programs. It includes two components: an Endpoint Monitor (designed to run on a QUIC client or server host) and a Middlebox Monitor (for deployment on a network device that observes traffic). 
 
 For any questions, please contact [Kokthay Poeng](mailto:kokthay.poeng@unamur.be).
 
@@ -26,7 +26,7 @@ For any questions, please contact [Kokthay Poeng](mailto:kokthay.poeng@unamur.be
 
 3. Short Header:
 - Validate UDP payload length.
-- Verify Fixed Bit (should be `1` as per QUIC specification).
+- Verify Fixed Bit (must be `0b1`).
 - Look up the connection in `connections_map` & `potential_quic`:
   - If found → Update `connections_map` and `sip_map`.
   - If not found → The packet might indicate Connection Migration, Probing Phase, QUIC Multipath, or be Non-QUIC.

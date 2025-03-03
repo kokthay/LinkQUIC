@@ -12,7 +12,7 @@ We tested the middlebox monitoring on Ubuntu 22.04.4 LTS, but it should work wit
 
 ## Example Usage
 
-To illustrate, let’s assume we run the Middlebox Monitor on an Ubuntu server running [Open vSwitch](https://www.openvswitch.org/). Then, update all network interfaces of the virtual switch in `middlebox.py`. This switch must be used for switching between a client and server or a client and the internet.
+To illustrate, let’s assume we run the Middlebox Monitor on an Ubuntu server running [Open vSwitch](https://www.openvswitch.org/)(OVS). Then, update all network interfaces of the virtual switch in `middlebox.py`. This switch must be used for switching between a client and server or a client and the internet.
 
 ### Start the monitor:
 ```bash
@@ -35,4 +35,4 @@ Potential QUIC Map:
 ```
 
 ### Testing QUIC Monitoring
-The easiest way to test it after starting the monitor on the switch is to open a web browser on the client endpoint and access websites that use the QUIC protocol (e.g., `youtube.com`, `facebook.com`, etc.). The maps displayed will show all QUIC connection information in the middlebox machine.
+The easiest way to test it after starting the monitor on the OVS machine is to open a web browser on the client endpoint, which connects to the internet through the switch, and browse websites that use the QUIC protocol (e.g., `youtube.com`, `facebook.com`, etc.). The displayed maps will show all QUIC connection information on the OVS machine.
