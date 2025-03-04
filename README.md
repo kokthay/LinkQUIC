@@ -73,7 +73,7 @@ This project utilizes multiple eBPF maps to store and process QUIC traffic infor
 
 Each of these maps can provide insights into QUIC connections, their transitions, and potential anomalies. The maps ensure that QUIC traffic is efficiently tracked and analyzed without requiring decryption.
 
-## Installation Guide for Ubuntu 22.04.04 LTS
+## Installation Guide for Ubuntu 22.04 LTS
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/kokthay/LinkQUIC.git
