@@ -138,4 +138,6 @@ try:
         print_potential_quic(bpf)
         time.sleep(2) #sleep 2s
 except KeyboardInterrupt:
+    bpf.remove_xdp("ens20", 0)
+    bpf.remove_xdp("ens21", 0)
     print("Detaching...")
