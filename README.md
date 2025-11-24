@@ -2,6 +2,26 @@
 
 This project provides tools to monitor QUIC network connections using eBPF (Extended Berkeley Packet Filter) programs. It includes two components: an Endpoint Monitor (designed to run on a QUIC client or server host) and a Middlebox Monitor (for deployment on a network device that observes traffic). 
 
+This implementation accompanies the research described in our paper:
+
+[K. Poeng, L. Schumacher and S. Touch, "QUIC Traffic Identification in Kernel Space," 2025 International Symposium on Networks, Computers and Communications (ISNCC), Paris, France, 2025, pp. 1-8, doi: 10.1109/ISNCC66965.2025.11250416.](https://ieeexplore.ieee.org/document/11250416)
+
+### 📚 Citation
+
+If you use this code or build upon this work in academic research, please cite the paper using the following BibTeX entry:
+
+```bibtex
+@INPROCEEDINGS{linkquic2025,
+  author={Poeng, Kokthay and Schumacher, Laurent and Touch, Sereysethy},
+  booktitle={2025 International Symposium on Networks, Computers and Communications (ISNCC)}, 
+  title={QUIC Traffic Identification in Kernel Space}, 
+  year={2025},
+  pages={1-8},
+  keywords={Privacy;Protocols;Middleboxes;Load management;Encryption;Kernel;Low latency communication;Monitoring;Payloads;Guidelines;QUIC;UDP;Kernel Space;eBPF;Traffic Identification;Privacy},
+  doi={10.1109/ISNCC66965.2025.11250416}
+}
+```
+
 For any questions, please contact [Kokthay Poeng](mailto:kokthay.poeng@unamur.be).
 
 ## Dependencies
